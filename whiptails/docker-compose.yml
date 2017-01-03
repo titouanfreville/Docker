@@ -1,0 +1,15 @@
+version: '2'
+services:
+  whiptails:
+    build:
+      # Context declaration required cause of dockerfile specification.
+      context: .
+      dockerfile: Dockerfile
+    image: titouanfreville/whiptails:1.0
+    container_name: whiptails
+    # Use to provide your own command script to the container
+    # command: "script.sh"
+    tty: true
+    # volumes:
+      # Mount current directory in container if you need to share scripts.
+      # - .:/home/run
